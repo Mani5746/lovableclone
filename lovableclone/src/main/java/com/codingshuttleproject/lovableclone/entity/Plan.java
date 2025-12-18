@@ -5,10 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
-@FieldDefaults (level = AccessLevel.PRIVATE)
 @Getter
 @Setter
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Plan {
+
     Long id;
 
     String name;
@@ -16,8 +17,8 @@ public class Plan {
     String stripePriceId;
     Integer maxProjects;
     Integer maxTokensPerDay;
-    Integer maxPreviews; // maximum Previous
-    Boolean unlimitedAi; // Unlimited access tokens to LLM
+    Integer maxPreviews; //max number of previews allowed per plan
+    Boolean unlimitedAi; //unlimited access to LLM, ignore maxTokensPerDay if true
 
     Boolean active;
 }

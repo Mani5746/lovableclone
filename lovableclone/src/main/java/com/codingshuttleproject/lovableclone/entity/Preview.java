@@ -1,5 +1,6 @@
 package com.codingshuttleproject.lovableclone.entity;
 
+
 import com.codingshuttleproject.lovableclone.enums.PreviewStatus;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -8,13 +9,13 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
 
-@FieldDefaults(level = AccessLevel.PRIVATE)
 @Getter
 @Setter
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Preview {
 
-
     Long id;
+
     Project project;
 
     String namespace;
@@ -22,9 +23,10 @@ public class Preview {
     String previewUrl;
 
     PreviewStatus status;
-    Instant startedAt;
 
+    Instant startedAt;
     Instant terminatedAt;
 
-    Instant createdAt; 
+    Instant createdAt;
+
 }

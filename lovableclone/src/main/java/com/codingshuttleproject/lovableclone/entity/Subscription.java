@@ -8,26 +8,25 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
 
-@FieldDefaults (level = AccessLevel.PRIVATE)
 @Getter
 @Setter
-
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Subscription {
-Long id;
 
-User user;
-Plan plan;
+    Long id;
 
-String stripeCustomerId;
-String stripeSubscriptionId;
+    User user;
+    Plan plan;
 
-SubscriptionStatus status;
+    SubscriptionStatus status;
 
-Instant currentPeriodStart;
-Instant currentPeriodEnd;
-Boolean cancelAtPeriodEnd=false;
+    String stripeCustomerId;
+    String stripeSubscriptionId;
 
-Instant createdAt;
-Instant updatedAt;
+    Instant currentPeriodStart;
+    Instant currentPeriodEnd;
+    Boolean cancelAtPeriodEnd = false;
 
+    Instant createdAt;
+    Instant updatedAt;
 }

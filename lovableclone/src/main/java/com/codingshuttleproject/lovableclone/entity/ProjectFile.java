@@ -1,7 +1,16 @@
 package com.codingshuttleproject.lovableclone.entity;
 
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.FieldDefaults;
+
 import java.time.Instant;
 
+@Getter
+@Setter
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class ProjectFile {
 
     Long id;
@@ -9,13 +18,15 @@ public class ProjectFile {
     Project project;
 
     String path;
-     String minioObjectKey;
 
-     Instant createdAt;
+    String minioObjectKey;
 
-     Instant updatedAt;
+    Instant createdAt;
 
-     User createdBy;
+    Instant updatedAt;
 
-     User updatedBy;
+    User createdBy;
+
+    User updatedBy;
+
 }
