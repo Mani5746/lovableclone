@@ -43,4 +43,6 @@ public class BillingController {
         Long userId = 1L;
         return ResponseEntity.ok(subscriptionService.openCustomerPortal(userId));
     }
+
+
 }
