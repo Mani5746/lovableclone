@@ -1,6 +1,5 @@
 package com.codingshuttleproject.lovableclone.controllers;
 
-
 import com.codingshuttleproject.lovableclone.dto.auth.AuthResponse;
 import com.codingshuttleproject.lovableclone.dto.auth.LoginRequest;
 import com.codingshuttleproject.lovableclone.dto.auth.SignupRequest;
@@ -16,7 +15,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/auth")
-@FieldDefaults(makeFinal = true, level= AccessLevel.PRIVATE) // This will make all the fields inside class as private and final
+@FieldDefaults(makeFinal = true, level= AccessLevel.PRIVATE)
+
+
+// This will make all the fields inside class as private and final
 public class AuthController {
 
      AuthService authService;

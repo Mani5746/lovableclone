@@ -3,7 +3,6 @@ package com.codingshuttleproject.lovableclone.controllers;
 import com.codingshuttleproject.lovableclone.dto.Subscription.*;
 import com.codingshuttleproject.lovableclone.service.PlanService;
 import com.codingshuttleproject.lovableclone.service.SubscriptionService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,11 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
+
 public class BillingController {
+
 
     private final PlanService planService;
     private final SubscriptionService subscriptionService;
+
+    public BillingController(PlanService planService, SubscriptionService subscriptionService) {
+        this.planService = planService;
+        this.subscriptionService = subscriptionService;
+    }
 
     @GetMapping("/api/plans")
     public ResponseEntity<List<PlanResponse>> getAllPlans() {
