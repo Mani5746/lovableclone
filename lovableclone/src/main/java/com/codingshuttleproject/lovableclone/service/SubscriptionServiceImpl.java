@@ -4,6 +4,7 @@ import com.codingshuttleproject.lovableclone.dto.Subscription.CheckoutRequest;
 import com.codingshuttleproject.lovableclone.dto.Subscription.CheckoutResponse;
 import com.codingshuttleproject.lovableclone.dto.Subscription.PortalResponse;
 import com.codingshuttleproject.lovableclone.dto.Subscription.SubscriptionResponse;
+import com.codingshuttleproject.lovableclone.service.impl.SubscriptionService;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -2,6 +2,7 @@ package com.codingshuttleproject.lovableclone.service;
 
 import com.codingshuttleproject.lovableclone.dto.Subscription.PlanLimitsResponse;
 import com.codingshuttleproject.lovableclone.dto.Subscription.UsageTodayResponse;
+import com.codingshuttleproject.lovableclone.service.impl.UsageService;
 import org.springframework.stereotype.Service;
 
 @Service

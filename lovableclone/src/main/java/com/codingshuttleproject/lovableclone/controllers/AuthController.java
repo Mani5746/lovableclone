@@ -5,7 +5,7 @@ import com.codingshuttleproject.lovableclone.dto.auth.LoginRequest;
 import com.codingshuttleproject.lovableclone.dto.auth.SignupRequest;
 import com.codingshuttleproject.lovableclone.dto.auth.UserProfileResponse;
 import com.codingshuttleproject.lovableclone.service.AuthService;
-import com.codingshuttleproject.lovableclone.service.UserService;
+import com.codingshuttleproject.lovableclone.service.impl.UserService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;

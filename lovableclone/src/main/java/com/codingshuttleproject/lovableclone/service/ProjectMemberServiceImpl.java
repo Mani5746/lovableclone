@@ -3,6 +3,7 @@ package com.codingshuttleproject.lovableclone.service;
 import com.codingshuttleproject.lovableclone.dto.member.InviteMemberRequest;
 import com.codingshuttleproject.lovableclone.dto.member.MemberResponse;
 import com.codingshuttleproject.lovableclone.entity.ProjectMember;
+import com.codingshuttleproject.lovableclone.service.impl.ProjectMemberService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.codingshuttleproject.lovableclone.service;
+package com.codingshuttleproject.lovableclone.service.impl;
 
 import com.codingshuttleproject.lovableclone.dto.member.InviteMemberRequest;
 import com.codingshuttleproject.lovableclone.dto.member.MemberResponse;

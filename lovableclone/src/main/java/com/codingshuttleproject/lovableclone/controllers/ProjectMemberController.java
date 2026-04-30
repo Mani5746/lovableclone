@@ -3,7 +3,7 @@ package com.codingshuttleproject.lovableclone.controllers;
 import com.codingshuttleproject.lovableclone.dto.member.InviteMemberRequest;
 import com.codingshuttleproject.lovableclone.dto.member.MemberResponse;
 import com.codingshuttleproject.lovableclone.entity.ProjectMember;
-import com.codingshuttleproject.lovableclone.service.ProjectMemberService;
+import com.codingshuttleproject.lovableclone.service.impl.ProjectMemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

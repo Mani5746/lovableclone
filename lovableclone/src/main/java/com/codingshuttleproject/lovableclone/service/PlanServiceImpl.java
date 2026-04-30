@@ -1,6 +1,7 @@
 package com.codingshuttleproject.lovableclone.service;
 
 import com.codingshuttleproject.lovableclone.dto.Subscription.PlanResponse;
+import com.codingshuttleproject.lovableclone.service.impl.PlanService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
