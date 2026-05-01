@@ -1,7 +1,6 @@
 spring:
   application:
     name: lovableclone
-    description: this is application
 
   datasource:
     url: jdbc:postgresql://localhost:5432/testdb
