@@ -1,8 +1,8 @@
-package com.codingshuttleproject.lovableclone.service;
+package com.codingshuttleproject.lovableclone.service.impl;
 
 import com.codingshuttleproject.lovableclone.dto.Subscription.PlanLimitsResponse;
 import com.codingshuttleproject.lovableclone.dto.Subscription.UsageTodayResponse;
-import com.codingshuttleproject.lovableclone.service.impl.UsageService;
+import com.codingshuttleproject.lovableclone.service.UsageService;
 import org.springframework.stereotype.Service;
 
 @Service

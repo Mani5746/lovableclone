@@ -1,8 +1,8 @@
 package com.codingshuttleproject.lovableclone.controllers;
 
 import com.codingshuttleproject.lovableclone.dto.Subscription.*;
-import com.codingshuttleproject.lovableclone.service.impl.PlanService;
-import com.codingshuttleproject.lovableclone.service.impl.SubscriptionService;
+import com.codingshuttleproject.lovableclone.service.PlanService;
+import com.codingshuttleproject.lovableclone.service.SubscriptionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

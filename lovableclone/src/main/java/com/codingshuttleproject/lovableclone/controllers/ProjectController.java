@@ -3,7 +3,7 @@ package com.codingshuttleproject.lovableclone.controllers;
 import com.codingshuttleproject.lovableclone.dto.project.ProjectRequest;
 import com.codingshuttleproject.lovableclone.dto.project.ProjectResponse;
 import com.codingshuttleproject.lovableclone.dto.project.ProjectSummaryResponse;
-import com.codingshuttleproject.lovableclone.service.impl.ProjectService;
+import com.codingshuttleproject.lovableclone.service.ProjectService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

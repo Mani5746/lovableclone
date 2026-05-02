@@ -3,7 +3,7 @@ package com.codingshuttleproject.lovableclone.controllers;
 
 import com.codingshuttleproject.lovableclone.dto.Subscription.PlanLimitsResponse;
 import com.codingshuttleproject.lovableclone.dto.Subscription.UsageTodayResponse;
-import com.codingshuttleproject.lovableclone.service.impl.UsageService;
+import com.codingshuttleproject.lovableclone.service.UsageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

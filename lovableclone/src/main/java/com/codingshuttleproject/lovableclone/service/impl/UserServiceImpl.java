@@ -1,7 +1,7 @@
-package com.codingshuttleproject.lovableclone.service;
+package com.codingshuttleproject.lovableclone.service.impl;
 
 import com.codingshuttleproject.lovableclone.dto.auth.UserProfileResponse;
-import com.codingshuttleproject.lovableclone.service.impl.UserService;
+import com.codingshuttleproject.lovableclone.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service

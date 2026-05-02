@@ -1,8 +1,8 @@
-package com.codingshuttleproject.lovableclone.service;
+package com.codingshuttleproject.lovableclone.service.impl;
 
 import com.codingshuttleproject.lovableclone.dto.project.FileContentResponse;
 import com.codingshuttleproject.lovableclone.dto.project.FileNode;
-import com.codingshuttleproject.lovableclone.service.impl.FileService;
+import com.codingshuttleproject.lovableclone.service.FileService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
