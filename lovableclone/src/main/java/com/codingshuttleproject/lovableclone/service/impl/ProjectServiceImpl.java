@@ -28,8 +28,14 @@ public class ProjectServiceImpl implements ProjectService {
     ProjectMapper projectMapper;
     @Override
     public List<ProjectSummaryResponse> getUserProjects(Long userId) {
-        // TODO: implement get user projects logic
-        return null;
+
+//        return projectRepository.findAllAccesibleByUser(userId)
+//                .stream()
+//                .map(projectMapper::toProjectSummaryResponse)
+//                .collect(Collectors.toList());
+
+        var projects=projectRepository.findAllAccesibleByUser(userId);
+        return projectMapper.toListOfProjectSummaryResponse(projects);
     }
 
     @Override
