@@ -15,6 +15,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.Instant;
 import java.util.List;
 
 @Service
@@ -29,19 +30,14 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public List<ProjectSummaryResponse> getUserProjects(Long userId) {
 
-//        return projectRepository.findAllAccesibleByUser(userId)
-//                .stream()
-//                .map(projectMapper::toProjectSummaryResponse)
-//                .collect(Collectors.toList());
-
-        var projects=projectRepository.findAllAccesibleByUser(userId);
+        var projects=projectRepository.findAllAccessibleByUser(userId);
         return projectMapper.toListOfProjectSummaryResponse(projects);
     }
 
     @Override
     public ProjectResponse getUserProjectById(Long id, Long userId) {
-        // TODO: implement get project by id logic
-        return null;
+        Project project =getAccessibleProjectById(id,userId);
+       return projectMapper.toProjectResponse(project);
     }
 
     @Override
@@ -61,12 +57,23 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public ProjectResponse updateProject(Long id, ProjectRequest request, Long userId) {
-        // TODO: implement update project logic
-        return null;
+         Project project =getAccessibleProjectById(id,userId);
+         project.setName(request.name());
+         project=projectRepository.save(project);
+        return projectMapper.toProjectResponse(project);
     }
 
     @Override
     public void softDelete(Long id, Long userId) {
-        // TODO: implement soft delete logic
+        Project project =getAccessibleProjectById(id,userId);
+        if(!project.getOwner().getId().equals(userId)){
+            throw new RuntimeException("You are not allowed to delete");
+        }
+        project.setDeletedAt(Instant.now());
+        projectRepository.save(project);
+    }
+
+    public Project getAccessibleProjectById(Long projectId,Long userId){
+        return projectRepository.findAccessibleProjectById(projectId,userId).orElseThrow();
     }
 }
