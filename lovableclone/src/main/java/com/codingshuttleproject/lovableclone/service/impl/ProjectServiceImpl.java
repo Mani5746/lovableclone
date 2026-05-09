@@ -62,7 +62,7 @@ public class ProjectServiceImpl implements ProjectService {
             throw new RuntimeException("You are not allowed to update");
         }
          project.setName(request.name());
-         project=projectRepository.save(project);
+        project=projectRepository.save(project);
         return projectMapper.toProjectResponse(project);
     }
 
