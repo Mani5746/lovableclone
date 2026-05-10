@@ -1,9 +1,11 @@
 package com.codingshuttleproject.lovableclone.mapper;
 
 
+import com.codingshuttleproject.lovableclone.dto.member.MemberResponse;
 import com.codingshuttleproject.lovableclone.dto.project.ProjectResponse;
 import com.codingshuttleproject.lovableclone.dto.project.ProjectSummaryResponse;
 import com.codingshuttleproject.lovableclone.entity.Project;
+import com.codingshuttleproject.lovableclone.entity.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -18,4 +20,5 @@ public interface ProjectMapper {
     ProjectSummaryResponse toProjectSummaryResponse(Project project);
 
     List<ProjectSummaryResponse> toListOfProjectSummaryResponse(List<Project> projects);
+
 }

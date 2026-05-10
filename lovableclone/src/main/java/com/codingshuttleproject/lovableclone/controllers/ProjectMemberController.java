@@ -2,7 +2,6 @@ package com.codingshuttleproject.lovableclone.controllers;
 
 import com.codingshuttleproject.lovableclone.dto.member.InviteMemberRequest;
 import com.codingshuttleproject.lovableclone.dto.member.MemberResponse;
-import com.codingshuttleproject.lovableclone.entity.ProjectMember;
 import com.codingshuttleproject.lovableclone.service.ProjectMemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,7 +18,7 @@ public class ProjectMemberController {
     private final ProjectMemberService projectMemberService;
 
     @GetMapping
-    public ResponseEntity<List<ProjectMember>> getProjectMembers(
+    public ResponseEntity<List<MemberResponse>> getProjectMembers(
             @PathVariable Long projectId
     ){
  Long userId=1L;
