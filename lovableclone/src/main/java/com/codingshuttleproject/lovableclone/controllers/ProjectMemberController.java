@@ -1,5 +1,4 @@
 package com.codingshuttleproject.lovableclone.controllers;
-
 import com.codingshuttleproject.lovableclone.dto.member.InviteMemberRequest;
 import com.codingshuttleproject.lovableclone.dto.member.MemberResponse;
 import com.codingshuttleproject.lovableclone.service.ProjectMemberService;
@@ -36,7 +35,6 @@ public class ProjectMemberController {
         );
 
     }
-
     @PatchMapping("/{memberId}")
     public ResponseEntity<MemberResponse> updateMemberRole(
             @PathVariable Long projectId,
@@ -49,13 +47,13 @@ public class ProjectMemberController {
     }
 
     @DeleteMapping("/{memberId}")
-    public ResponseEntity<MemberResponse> deleteMemberRole(
+    public ResponseEntity<Void> deleteMemberRole(
             @PathVariable Long projectId,
             @PathVariable Long memberId
-
     )
     {
         Long userId=1L;
-        return ResponseEntity.ok(projectMemberService.deleteProjectMember(projectId,memberId,userId));
+        projectMemberService.removeProjectMember(projectId,memberId,userId);
+       return ResponseEntity.noContent().build();
     }
 }
