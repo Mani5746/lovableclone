@@ -4,6 +4,7 @@ import com.codingshuttleproject.lovableclone.dto.project.ProjectRequest;
 import com.codingshuttleproject.lovableclone.dto.project.ProjectResponse;
 import com.codingshuttleproject.lovableclone.dto.project.ProjectSummaryResponse;
 import com.codingshuttleproject.lovableclone.service.ProjectService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,13 +36,13 @@ return ResponseEntity.ok(projectService.getUserProjectById(id,userId));
     }
 
     @PostMapping
-    ResponseEntity<ProjectResponse> createProject(@RequestBody ProjectRequest request ){
+    ResponseEntity<ProjectResponse> createProject(@RequestBody @Valid ProjectRequest request ){
         Long userId=1L;
         return ResponseEntity.status(HttpStatus.CREATED).body(projectService.createProject(request,userId));
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<ProjectResponse> updateProject(@PathVariable Long id,@RequestBody ProjectRequest request){
+    public ResponseEntity<ProjectResponse> updateProject(@PathVariable Long id,@RequestBody @Valid ProjectRequest request){
         Long userId=1L;
 return ResponseEntity.ok(projectService.updateProject(id,request,userId));
     }

@@ -2,6 +2,7 @@ package com.codingshuttleproject.lovableclone.service.impl;
 
 import com.codingshuttleproject.lovableclone.dto.member.InviteMemberRequest;
 import com.codingshuttleproject.lovableclone.dto.member.MemberResponse;
+import com.codingshuttleproject.lovableclone.dto.member.UpdateMemberRoleRequest;
 import com.codingshuttleproject.lovableclone.entity.Project;
 import com.codingshuttleproject.lovableclone.entity.ProjectMember;
 import com.codingshuttleproject.lovableclone.entity.ProjectMemberId;
@@ -12,6 +13,7 @@ import com.codingshuttleproject.lovableclone.repository.ProjectRepository;
 import com.codingshuttleproject.lovableclone.repository.UserRepository;
 import com.codingshuttleproject.lovableclone.service.ProjectMemberService;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -80,7 +82,7 @@ public class ProjectMemberServiceImpl implements ProjectMemberService {
     }
 
     @Override
-    public MemberResponse updateMemberRole(Long projectId, Long memberId, InviteMemberRequest request, Long userId) {
+    public MemberResponse updateMemberRole(Long projectId, Long memberId, @Valid UpdateMemberRoleRequest request, Long userId) {
         Project project=getAccessibleProjectById(projectId, userId);
         if(!project.getOwner().getId().equals(userId))
             throw new RuntimeException("Not Allowed");
