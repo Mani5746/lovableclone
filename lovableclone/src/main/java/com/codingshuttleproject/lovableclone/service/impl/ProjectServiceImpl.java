@@ -46,7 +46,6 @@ public class ProjectServiceImpl implements ProjectService {
     User owner=userRepository.findById(userId).orElseThrow();
         Project project=Project.builder()
                 .name(request.name())
-                .owner(owner)
                 .isPublic(false)
                 .build();
      project=projectRepository.save(project);
